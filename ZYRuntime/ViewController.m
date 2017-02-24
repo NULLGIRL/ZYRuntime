@@ -23,6 +23,9 @@
 // 动态添加属性
 #import "NSObject+ZYProperty.h"
 
+// 字典转模型KVC实现
+#import "NSDictionary+ZYProperty.h"
+
 
 /*
  
@@ -58,6 +61,9 @@
     
     // 4. 动态添加属性
     objc_msgSend(self, @selector(addPropertyMethod));
+    
+    // 5. 字典转模型KVC的实现
+    objc_msgSend(self, @selector(dicChangeToModel));
     
 }
 
@@ -202,5 +208,18 @@
     NSLog(@"objc.name :  %@",objc.name);
 }
 
+
+#pragma mark - 字典转模型KVC的实现
+- (void)dicChangeToModel{
+    
+    // 获取文件全路径
+    NSString * filePath = [[NSBundle mainBundle] pathForResource:@"status.plist" ofType:nil];
+    
+    // 获取字典
+    NSDictionary * dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    
+    // 设计模型，创建属性代码
+    [dict createPropertyCode];
+}
 
 @end
