@@ -160,7 +160,13 @@
      */
     NSLog(@"%@",NSStringFromSelector(_cmd));
     
+    ZYPerson2 * p = [[ZYPerson2 alloc]init];
     
+    // 没有参数
+//    [p performSelector:@selector(study)];
+    
+    // 有参数
+    [p performSelector:@selector(study) withObject:@10];
 }
 
 
