@@ -17,6 +17,7 @@
 		FA7CC6AA1E5FD9E3006C8EDE /* ZYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7CC6A91E5FD9E3006C8EDE /* ZYImage.m */; };
 		FA7CC6AD1E5FDA81006C8EDE /* UIImage+ZYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7CC6AC1E5FDA81006C8EDE /* UIImage+ZYImage.m */; };
 		FA7CC6B11E5FE0A7006C8EDE /* ZYPerson2.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7CC6B01E5FE0A7006C8EDE /* ZYPerson2.m */; };
+		FA7CC6D31E602593006C8EDE /* NSObject+ZYProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7CC6D21E602593006C8EDE /* NSObject+ZYProperty.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		FA7CC6AC1E5FDA81006C8EDE /* UIImage+ZYImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZYImage.m"; sourceTree = "<group>"; };
 		FA7CC6AF1E5FE0A7006C8EDE /* ZYPerson2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPerson2.h; sourceTree = "<group>"; };
 		FA7CC6B01E5FE0A7006C8EDE /* ZYPerson2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPerson2.m; sourceTree = "<group>"; };
+		FA7CC6D11E602593006C8EDE /* NSObject+ZYProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZYProperty.h"; sourceTree = "<group>"; };
+		FA7CC6D21E602593006C8EDE /* NSObject+ZYProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZYProperty.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 		FA7CC68B1E5FC8D1006C8EDE /* ZYRuntime */ = {
 			isa = PBXGroup;
 			children = (
+				FA7CC6D01E60243C006C8EDE /* 4.动态添加属性 */,
 				FA7CC6AE1E5FE076006C8EDE /* 3.动态添加方法 */,
 				FA7CC6A71E5FD9D1006C8EDE /* 2.交换方法 */,
 				FA7CC6A61E5FD9C6006C8EDE /* 1.消息机制 */,
@@ -121,6 +125,15 @@
 				FA7CC6B01E5FE0A7006C8EDE /* ZYPerson2.m */,
 			);
 			name = "3.动态添加方法";
+			sourceTree = "<group>";
+		};
+		FA7CC6D01E60243C006C8EDE /* 4.动态添加属性 */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CC6D11E602593006C8EDE /* NSObject+ZYProperty.h */,
+				FA7CC6D21E602593006C8EDE /* NSObject+ZYProperty.m */,
+			);
+			name = "4.动态添加属性";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +212,7 @@
 				FA7CC6B11E5FE0A7006C8EDE /* ZYPerson2.m in Sources */,
 				FA7CC6941E5FC8D1006C8EDE /* ViewController.m in Sources */,
 				FA7CC6AA1E5FD9E3006C8EDE /* ZYImage.m in Sources */,
+				FA7CC6D31E602593006C8EDE /* NSObject+ZYProperty.m in Sources */,
 				FA7CC6AD1E5FDA81006C8EDE /* UIImage+ZYImage.m in Sources */,
 				FA7CC6911E5FC8D1006C8EDE /* AppDelegate.m in Sources */,
 				FA7CC68E1E5FC8D1006C8EDE /* main.m in Sources */,
@@ -361,6 +375,7 @@
 				FA7CC6A21E5FC8D1006C8EDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,8 +17,12 @@
 #import "ZYImage.h"
 #import "UIImage+ZYImage.h"
 
-//动态添加方法
+// 动态添加方法
 #import "ZYPerson2.h"
+
+// 动态添加属性
+#import "NSObject+ZYProperty.h"
+
 
 /*
  
@@ -51,6 +55,9 @@
     
     // 3. 动态添加方法
     objc_msgSend(self, @selector(performResolveMethod));
+    
+    // 4. 动态添加属性
+    objc_msgSend(self, @selector(addPropertyMethod));
     
 }
 
@@ -166,7 +173,33 @@
 //    [p performSelector:@selector(study)];
     
     // 有参数
-    [p performSelector:@selector(study) withObject:@10];
+    [p performSelector:@selector(study:) withObject:@10];
+}
+
+#pragma mark - 动态添加属性
+- (void) addPropertyMethod{
+    /*
+     
+        什么时候需要动态添加属性？
+     
+        开发场景：
+        给“系统”的类添加属性的时候，可以使用runtime动态添加属性方法
+        
+        本质：
+        动态添加属性，就是让某个属性与对象产生关联
+     
+        需求：
+        让一个NSObject类 保存一个字符串
+     
+        实现：
+        1. 让每个NSObject实例 有一个name属性来保存
+        2. 添加分类 让runtime方法实现
+     
+     */
+    
+    NSObject * objc = [[NSObject alloc]init];
+    objc.name = @"123456";
+    NSLog(@"objc.name :  %@",objc.name);
 }
 
 
