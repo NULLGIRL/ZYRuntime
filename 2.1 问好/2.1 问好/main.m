@@ -6,6 +6,8 @@
 //  Copyright © 2017年 Momo. All rights reserved.
 //
 
+// 动态创建一个类，并创建成员变量和方法，最后赋值成员变量并发送消息。其中成员变量的赋值使用了KVC和object_setIvar函数两种方式，这些东西大家举一反三就可以了。
+
 #import <Foundation/Foundation.h>
 
 #if TARGET_IPHONE_SIMULATOR
